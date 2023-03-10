@@ -14,7 +14,7 @@ namespace TraderHashMod
     {
         public const string pluginGuid = "net.elmo.stationeers.TraderHash";
         public const string pluginName = "TraderHash";
-        public const string pluginVersion = "1.0";
+        public const string pluginVersion = "1.1";
         public static void Log(string line)
         {
             Debug.Log("[" + pluginName + "]: " + line);

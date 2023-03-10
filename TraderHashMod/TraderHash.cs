@@ -1,9 +1,8 @@
 ﻿using Assets.Scripts;
 using Assets.Scripts.Objects.Electrical;
 using Assets.Scripts.Objects.Motherboards;
+using Assets.Scripts.Util;
 using HarmonyLib;
-using System.Security.Cryptography;
-using System.Text;
 using UnityEngine;
 
 namespace TraderHashMod
@@ -16,8 +15,9 @@ namespace TraderHashMod
         {
             if (logicType == LogicType.SignalID && ____strongestContact != null)
             {
-                string str = ____strongestContact.DisplayName;
-                int value = Hash128.Parse(str).GetHashCode();
+                //string str = ____strongestContact.DisplayName;
+                //int value = Hash128.Parse(str).GetHashCode();
+                int value = ____strongestContact.TradeData.TraderData.IdHash;
                 __result = value;
                 return false;
             }
